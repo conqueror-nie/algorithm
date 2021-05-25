@@ -16,6 +16,7 @@ public class ArrayTest {
         data = new int[size];   //分配的内存空间
         index = 0;
 
+
     }
 
     public void print(){
