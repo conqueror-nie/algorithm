@@ -4,7 +4,7 @@ package _05queue;
  * @Author: Jamie Nie
  * @Date: 2021/5/26 10:35
  * @Slogan: The harder you work, the more luck you have.
- * @desc:
+ * @desc:   循环队列
  */
 public class CircleQueue {
 

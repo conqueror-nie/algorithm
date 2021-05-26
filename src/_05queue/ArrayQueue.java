@@ -4,7 +4,7 @@ package _05queue;
  * @Author: Jamie Nie
  * @Date: 2021/5/26 9:38
  * @Slogan: The harder you work, the more luck you have.
- * @desc:
+ * @desc: 单向队列
  */
 public class ArrayQueue {
     int[] data; //数据
