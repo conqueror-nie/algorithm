@@ -45,7 +45,7 @@ public class ArrayStack<T> implements MyStack{
     }
 
     public void judgeSize(){
-        if(n <= a.length){
+        if(n >= a.length){
             resize(a.length * 2); //扩容两倍
         }else if (n > 0 && n < a.length / 2){
             resize(a.length / 2);  //缩容至1/2
@@ -61,16 +61,20 @@ public class ArrayStack<T> implements MyStack{
     }
 
     public void print(){
-
+        for (int i=0;i<a.length;i++){
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
         ArrayStack arrayStack = new ArrayStack(10);
         arrayStack.push(1);
-        arrayStack.push(1);
-        arrayStack.push(1);
+        arrayStack.push(2);
+        arrayStack.push(3);
         arrayStack.pop();
         System.out.println(arrayStack.size());
+        arrayStack.print();
 
 
     }
