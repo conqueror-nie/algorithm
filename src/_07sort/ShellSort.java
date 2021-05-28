@@ -12,41 +12,25 @@ public class ShellSort {
 
     public static void shellSort(int[] data){
         for (int add=data.length/2;add>=1;add=add/2){
-            for (int i=add ;i<=data.length;i+=add){
+            for (int i=add ;i<data.length;i=i+add){
                 int a = data[i];
                 int j = i-add;
-                for (;j>=0;j-=add){
+                for (;j>=0;j=j-add){
                     if (a < data[j]){
-                        data[j+add] = a;
+                        data[j+add] = data[j];
                     }else {
                         break;
                     }
                 }
                 data[j+add] = a;
+                System.out.println(Arrays.toString(data));
             }
         }
-        System.out.println(Arrays.toString(data));
-    }
-
-    public static void insertSort(int[] data){
-
-        for(int i=1;i<data.length;i++){
-            int a = data[i];
-            int j = i-1;
-            for (;j>=0;j--){
-                if (a < data[j]){
-                    data[j+1] = data[j];
-                }else {
-                    break;
-                }
-            }
-            data[j+1] = a;
-        }
-        System.out.println(Arrays.toString(data));
     }
 
     public static void main(String[] args) {
-        int[] data = new int[]{3,2,1,9,5621,56461,556,564153,5343813,531385};
+        int[] data = new int[]{3,69,1,9,86,54,65,32,59,7};
+        System.out.println("初始顺序：" + Arrays.toString(data));
         shellSort(data);
     }
 }
